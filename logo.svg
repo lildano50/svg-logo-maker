@@ -3,9 +3,9 @@
         width="300" height="200"
         xmlns="http://www.w3.org/2000/svg">
     
-        <rect x="0" y="0" width="300" height="200" fill="white" />
-            
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="blue">DAP</text>
+        <polygon points="0,150 150,0 300,150" fill="PURPLE" />
+    
+        <text x="150" y="125" font-size="60" text-anchor="middle" fill="ORANGE">DAP</text>
     
         </svg>
         

@@ -3,12 +3,17 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateSVG = require ('../svg-logo-maker/library/generateSVG');
 
+// Used to restrict character input to 3 characters
+const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt')
+inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt)
+
 // Array of questions to be generated
 const questions = [
     {
-        type: 'input',
+        type: 'maxlength-input',
         message: "Enter 3 characters: ",
         name: 'threeCharacters',
+        maxLength: 3,        
     },
     {
         type: 'input',
