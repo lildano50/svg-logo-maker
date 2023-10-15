@@ -1,8 +1,10 @@
+// Import 3 classes, one for each shape
 const Circle = require('./circle')
 const Square = require('./square')
 const Triangle = require ('./triangle')
 
-// This function generates the skeleton of the SVG file
+// This function generates the SVG file based on user selection of shape. Data will be 
+// pushed into the class function shape()
 function generateSVG(data) {
     if (data.shape === "Circle") {
         const shape = new Circle;

@@ -1,3 +1,6 @@
+//This class has a shape function that will return a circle shape.
+//color and text will be fed into the shape.
+
 class Circle {
     shape(data) {
         return `
