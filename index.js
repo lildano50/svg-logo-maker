@@ -1,6 +1,7 @@
 // Includes packages/imports needed for program
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateSVG = require ('../svg-logo-maker/library/generateSVG');
 
 // Array of questions to be generated
 const questions = [
@@ -15,7 +16,7 @@ const questions = [
         name: "textColor",
     },
     {
-        type: 'input',
+        type: 'list',
         message: "Enter a shape from options below: ",
         name: "shape",
         choices: ["Circle", "Square", "Triangle"]
@@ -32,8 +33,8 @@ function init(promptQuestions){
     inquirer
         .prompt(promptQuestions)
         .then((response) =>
-            fs.writeFile('logo.svg', /* FILLER */"" , (err) =>
-            err ? console.error(err) : console.log('Success!')
+            fs.writeFile('logo.svg', generateSVG(response), (err) =>
+            err ? console.error(err) : console.log('Generated logo.svg')
 ));
 }
 
